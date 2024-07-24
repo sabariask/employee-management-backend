@@ -12,7 +12,7 @@ export async function connectToDatabase(uri: string) {
   const db = client.db("meanStackProject");
   await applyShemaValidation(db);
 
-  const employeesConnection = db.collection<Employee>("employee");
+  const employeesConnection = db.collection<Employee>("employees");
   collections.employees = employeesConnection;
 }
 
